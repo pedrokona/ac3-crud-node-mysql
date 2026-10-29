@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AC3 | Cadastro de alunos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header><span>UniFECAF · AC3</span><h1>Cadastro de alunos</h1><p>Crie, consulte, atualize e exclua registros no MySQL.</p></header>
+<main>
+  <section aria-labelledby="titulo-form">
+    <h2 id="titulo-form">Novo aluno</h2>
+    <form id="form-aluno">
+      <label for="nome">Nome</label><input id="nome" name="nome" maxlength="100" required>
+      <label for="email">E-mail</label><input id="email" name="email" type="email" maxlength="120" required>
+      <label for="curso">Curso</label><input id="curso" name="curso" maxlength="100" required>
+      <div class="acoes"><button id="salvar" type="submit">Cadastrar</button><button id="cancelar" type="button" class="secundario" hidden>Cancelar edição</button></div>
+    </form>
+  </section>
+  <p id="mensagem" role="status" aria-live="polite"></p>
+  <section aria-labelledby="titulo-lista">
+    <div class="cabecalho"><h2 id="titulo-lista">Alunos cadastrados</h2><button id="recarregar" type="button" class="secundario">Atualizar lista</button></div>
+    <div class="tabela"><table><caption>Registros armazenados no banco escola</caption><thead><tr><th scope="col">ID</th><th scope="col">Nome</th><th scope="col">E-mail</th><th scope="col">Curso</th><th scope="col">Ações</th></tr></thead><tbody id="lista"></tbody></table></div>
+  </section>
+</main>
+<footer>Prof. Nilvan Garcia de Almeida · Server and Data Center Administration</footer>
+</body>
+</html>
